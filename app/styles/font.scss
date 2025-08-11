@@ -1,0 +1,85 @@
+/* Font imports and variables */
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('/public/fonts/Inter-Light.eot');
+  src: url('/public/fonts/Inter-Light.eot?#iefix') format('embedded-opentype'),
+      url('/public/fonts/Inter-Light.woff2') format('woff2'),
+      url('/public/fonts/Inter-Light.woff') format('woff'),
+      url('/public/fonts/Inter-Light.ttf') format('truetype'),
+      url('/public/fonts/Inter-Light.svg#Inter-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('/public/fonts/Inter-Regular.eot');
+  src: url('/public/fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/public/fonts/Inter-Regular.woff2') format('woff2'),
+      url('/public/fonts/Inter-Regular.woff') format('woff'),
+      url('/public/fonts/Inter-Regular.ttf') format('truetype'),
+      url('/public/fonts/Inter-Regular.svg#Inter-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url('/public/fonts/Inter-Medium.eot');
+  src: url('/public/fonts/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+      url('/public/fonts/Inter-Medium.woff2') format('woff2'),
+      url('/public/fonts/Inter-Medium.woff') format('woff'),
+      url('/public/fonts/Inter-Medium.ttf') format('truetype'),
+      url('/public/fonts/Inter-Medium.svg#Inter-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url('/public/fonts/Inter-SemiBold.eot');
+  src: url('/public/fonts/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('/public/fonts/Inter-SemiBold.woff2') format('woff2'),
+      url('/public/fonts/Inter-SemiBold.woff') format('woff'),
+      url('/public/fonts/Inter-SemiBold.ttf') format('truetype'),
+      url('/public/fonts/Inter-SemiBold.svg#Inter-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('/public/fonts/Inter-Bold.eot');
+  src: url('/public/fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/public/fonts/Inter-Bold.woff2') format('woff2'),
+      url('/public/fonts/Inter-Bold.woff') format('woff'),
+      url('/public/fonts/Inter-Bold.ttf') format('truetype'),
+      url('/public/fonts/Inter-Bold.svg#Inter-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Inter-Black';
+  src: url('/public/fonts/Inter-Black.eot');
+  src: url('/public/fonts/Inter-Black.eot?#iefix') format('embedded-opentype'),
+      url('/public/fonts/Inter-Black.woff2') format('woff2'),
+      url('/public/fonts/Inter-Black.woff') format('woff'),
+      url('/public/fonts/Inter-Black.ttf') format('truetype'),
+      url('/public/fonts/Inter-Black.svg#Inter-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+$font-light: 'Inter-Light', sans-serif;   //300
+$font-regular: 'Inter-Regular', sans-serif;   //normal
+$font-medium: 'Inter-Medium', sans-serif;   //500
+$font-semi-bold: 'Inter-SemiBold', sans-serif;  //600
+$font-bold: 'Inter-Bold', sans-serif;   //700 
+$font-black: 'Inter-Black', sans-serif;  //900
