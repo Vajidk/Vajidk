@@ -1,0 +1,113 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+@use 'font' as *;
+
+.payout-service{
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 130px 0;
+    margin: 0;
+    @include respond-to(large) {
+        padding: 50px 0;
+    }
+    .container{
+        justify-content: space-between;
+        @include respond-to(large) {
+            flex-direction: column;
+        }
+    }
+    .content{
+        @media screen and (max-width: 1440px) {
+            width: 60%;
+        }
+        @include respond-to(large) {
+            width: 100%;
+            order: 2;
+        }
+    }
+    .main-heading{
+        display: block;
+        font-family: $font-medium;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        color: rgba(194, 196, 200, 1);
+        margin-bottom: 50px;
+        @include respond-to(large) {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+    }
+    .stepers{
+        max-width: 580px;
+        position: relative;
+        display: flex;
+        margin-bottom: 30px;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .list-item{
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        opacity: 0.3;
+        @include respond-to(large) {
+            margin-bottom: 20px;
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        &.active{
+            opacity: 1;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+        }
+        .heading{
+            font-family: $font-medium;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            color: rgba(255,255,255,0.7);
+            display: block;
+            margin-bottom: 10px;
+            color: $color-white;
+            @include respond-to(large) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        .para{
+            font-family: $font-regular;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(255,255,255,0.7);
+            display: block;
+            @include respond-to(large) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+    .img-wrap{
+        @media screen and (max-width: 1440px) {
+            width: 40%;
+        }
+        @include respond-to(large) {
+            width: 300px;
+            order: 1;
+        }
+        img{
+            @media screen and (max-width: 1440px) {
+                height: auto;
+            }
+        }
+    }
+}

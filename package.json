@@ -1,0 +1,30 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Modern landing page with SCSS compilation",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass assets/scss/main.scss:assets/css/main.css --style=compressed",
+    "build:dev": "sass assets/scss/main.scss:assets/css/main.css --style=expanded --source-map",
+    "watch": "sass assets/scss/main.scss:assets/css/main.css --watch --style=expanded --source-map",
+    "watch:compressed": "sass assets/scss/main.scss:assets/css/main.css --watch --style=compressed",
+    "clean": "rm -rf assets/css/*.css assets/css/*.css.map",
+    "dev": "npm run build:dev && npm run watch"
+  },
+  "keywords": [
+    "landing-page",
+    "scss",
+    "responsive",
+    "modern"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 

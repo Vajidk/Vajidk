@@ -1,0 +1,72 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+@use 'font' as *;
+
+.build-future{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 90px;
+    @include respond-to(large) {
+        padding: 80px 0;
+    }
+    .content{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        @include respond-to(large) {
+            flex-direction: column;
+        }
+        &:before,
+        &:after{
+            content: '';
+            position: absolute;
+            background: transparent url('../images/pixels.svg') no-repeat 0 0;
+            width: 348px;
+            height: 260px;
+            @include respond-to(large) {
+                width: 200px;
+                height: 160px;
+            }
+        }
+        &:before{
+            left: 0;
+            @include respond-to(large) {
+                top: -60px;
+            }
+        }
+        &:after{
+            right: 0;
+            @include respond-to(large) {
+                bottom: -50px;
+            }
+        }
+    }
+    .heading{
+        padding-top: 80px;
+        padding-left: 10px;
+        font-family: $font-semi-bold;
+        font-size: 50px;
+        line-height: 60px;
+        color: rgba(194, 196, 200, 1);
+        @include respond-to(large) {
+            font-size: 32px;
+            line-height: 42px;
+            padding: 0;
+            text-align: center;
+        }
+    }
+    .btn-wrap{
+        margin-right: 90px;
+        margin-top: 60px;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include respond-to(large) {
+            margin-right: 0;
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+@use 'font' as *;
+
+.video-wrap{
+    padding: 40px 0 80px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    @include respond-to(large) {
+        padding: 50px 0;
+    }
+}

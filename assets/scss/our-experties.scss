@@ -1,0 +1,206 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+@use 'font' as *;
+
+.our-experties{
+    position: relative;
+    display: flex;
+    padding: 30px 0 70px;
+    @include respond-to(large) {
+        padding-bottom: 30px;
+    }
+    .container{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card-content{
+        position: relative;
+    }
+
+    .main-heading{
+        max-width: 800px;
+        position: relative;
+        font-family: $font-medium;
+        font-weight: 500;
+        background: linear-gradient(90.27deg, #FFFFFF 1.63%, rgba(255, 255, 255, 0) 120%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 50px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-bottom: 30px;
+        @include respond-to(large) {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .sub-heading{
+        position: relative;
+        font-family: $font-regular;
+        font-weight: 400;
+        background: linear-gradient(90.27deg, #FFFFFF 1.63%, rgba(255, 255, 255, 0) 140%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 750px;
+        @include respond-to(large) {
+            width: 340px;
+            font-size: 18px;
+        }
+        &:before,
+        &:after{
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            width: 300px;
+            height: 58px;
+            background-repeat: no-repeat;
+            background-position: 0;
+            background-color: transparent;
+            @include respond-to(large) {
+                top: 0;
+                width: 100px;
+                height: 27px;
+                background-size: 100%;
+            }
+        }
+        &:before{
+            background-image: url(../images/line_left.png);
+        }
+        &:after{
+            background-image: url(../images/line_right.png);
+            right: 0;
+            left: auto;
+        }
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 60px;
+    }
+  
+    .swiper-slide {
+        display: flex;
+    }
+    
+    .card{
+        width: 305px;
+        height: 435px;
+        display: flex;
+        border-radius: 30px;
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 83% 100%, 0 100%);
+        padding: 2px;
+        // background: linear-gradient(110.9deg, rgba(89, 82, 234, 0) 1.96%, rgba(59, 9, 178, 0.5) 27.38%, #211A3D 73.78%, rgba(117, 158, 247, 0) 95.38%);
+        background: linear-gradient(126.9deg, rgba(89, 82, 234, 0) -24.04%, rgba(59, 9, 178, 0.5) -13.38%, #211A3D 100.78%, rgba(117, 158, 247, 0) 110.38%);
+        @include transition(all, 0.4s, ease-in-out);
+        margin: 0 auto;
+        cursor: pointer;
+        &:hover{
+            background: linear-gradient(126.9deg, rgba(89, 82, 234, 0) -24.04%, rgba(59, 9, 178, 0.5) 80%, #211A3D 100.78%, rgba(117, 158, 247, 0) 80%)
+        }
+    }
+    
+    .card-content{
+        padding: 30px 18px 50px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 83% 100%, 0 100%);
+        background: black;
+        
+        .img-wrap{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            margin-bottom: 10px;
+            overflow: hidden;
+            img{
+                @include transition(all, 0.4s, ease-in-out);
+                margin: auto;
+            }
+        }
+        h2{
+            font-family: $font-regular;
+            font-weight: 400;
+            color: $color-white;
+            font-size: 22px;
+            line-height: 100%;
+            margin-bottom: 20px;
+        }
+        p{
+            font-family: $font-regular;
+            font-weight: 400;
+            color: $color-white;
+            font-size: 15px;
+            line-height: 130%;
+            margin-bottom: 20px;
+        }
+    }
+  
+    .btn-right{
+        position: absolute;
+        right: 55px;
+        bottom: 40px;    
+        width: 27px;
+        height: 16px;
+        @include transition(all, 0.4s, ease-in-out);
+    }
+    .card:hover .btn-right{
+        right: 40px;
+    }
+
+    .swiper-btn-wrap{
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        width: 100px;
+        margin: auto;
+        z-index: 1;
+    }
+    .oe-slider-btn-next,
+    .oe-slider-btn-prev{
+        position: absolute;
+        height: 38px;
+        width: 38px;
+        line-height: 38px;
+        border: 1px solid rgba(189, 160, 255, 0.3);
+        background: #000 url('../images/dd_icon.svg') no-repeat center center;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        @include transition(all, 0.4s, ease-in-out);
+        &.swiper-button-disabled{
+            opacity: 0.5;
+            &:hover{
+                border: 1px solid rgba(189, 160, 255, 0.3);
+            }
+        }
+        &:hover{
+            border: 1px solid rgba(189, 160, 255, 1);
+        }
+    }
+    .swiper-btn-wrap .oe-slider-btn-next{
+        right: 0;
+        transform: rotate(-90deg);
+    }
+    .swiper-btn-wrap .oe-slider-btn-prev{
+        left: 0;
+        transform: rotate(90deg);
+    }
+}

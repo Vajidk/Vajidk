@@ -1,0 +1,32 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+@use 'font' as *;
+
+.text-wefocus{
+    position: relative;
+    display: flex;
+    will-change: transform;
+    .wefocus{
+        display: block;
+        max-width: 100%;
+        width: 100%;
+    }
+    p{
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: block;
+        padding: 200px 35px 100px;
+        font-family: $font-semi-bold;
+        font-weight: 600;
+        font-size: 90px;
+        line-height: 120%;
+        color: $color-white;
+        word-wrap: break-word;
+        white-space: normal;
+        @include respond-to(large) {
+            padding: 100px 0 100px;
+            font-size: 48px;
+        }
+    }
+}

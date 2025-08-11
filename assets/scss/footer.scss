@@ -1,0 +1,207 @@
+//footer css
+@use 'variable' as *;
+@use 'mixin' as *;
+@use 'font' as *;
+
+footer{
+    padding: 50px 0;
+    background: #000;
+    @include respond-to(large) {
+        padding: 30px 0 20px;
+    }
+    .container{
+        flex-direction: column;
+    }
+}
+
+.footer-top{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0 100px;
+    @include respond-to(large) {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+}
+
+.footer-about{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    @include respond-to(large) {
+        max-width: 100%;
+    }
+    .logo{
+        margin-bottom: 45px;
+        @include respond-to(large) {
+            margin-bottom: 20px;
+        }
+    }
+    p{
+        font-family: $font-regular;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(180, 180, 180, 1);
+        margin-bottom: 40px;
+        @include respond-to(large) {
+            margin-bottom: 15px;
+        }
+    }
+    .social-media{
+        display: flex;
+        list-style: none;
+        li{
+            display: flex;
+            flex-direction: row;
+            margin-right: 10px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+            a{
+                background: #000;
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                border: 1px solid rgb(62 75 86 / 46%);
+                @include transition(all, 0.4s, ease-in-out);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                    background: $color-primary;
+                    img{
+                        opacity: 1;
+                    }
+                }
+                img{
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    @include respond-to(large) {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    ul{
+        list-style: none;
+        margin-right: 90px;
+        @include respond-to(mediumlarge){
+            margin-right: 50px;
+        }
+        @include respond-to(large) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        &:last-of-type{
+            margin-right: 0;
+            @include respond-to(large) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .fnav-list{
+        display: flex;
+        flex-direction: column;
+        h3{
+            color: $color-white;
+            font-family: $font-medium;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 20px;
+            @include respond-to(large) {
+                margin-bottom: 10px;
+            }
+        }
+        &:last-of-type{
+            .fnav-link{
+                margin-bottom: 0;
+            }       
+        }
+    }
+    .fnav-link{
+        font-family: $font-regular;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        @include transition(all, 0.4s, ease-in-out);
+        text-decoration: none;
+        @include respond-to(large) {
+            margin-bottom: 10px;
+        }
+        &:hover{
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    @include respond-to(large) {
+        padding-top: 20px;
+        flex-direction: column;
+    }
+    .copy{
+        font-family: $font-regular;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.7);
+        @include respond-to(large) {
+            padding-bottom: 10px;
+        }
+    }
+    .fb-links{
+        position: relative;
+        display: flex;
+        a{
+            font-size: 13px;
+            line-height: 16px;
+            font-family: $font-regular;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0 15px;
+            display: flex;
+            position: relative;
+            text-decoration: none;
+            @include transition(all, 0.4s, ease-in-out);
+            &:hover{
+                color: rgba(255, 255, 255, 1);
+            }
+            &:first-of-type{
+                margin-left: 0;
+            }
+            &:last-of-type{
+                margin-right: 0;
+                &:after{
+                    display: none;
+                }
+            }
+            &:after{
+                position: absolute;
+                content: '';
+                height: 16px;
+                right: -15px;
+                top: 0;
+                width: 1px;
+                background: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+}

@@ -1,0 +1,272 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+@use 'font' as *;
+
+.enhancing-payments{
+    position: relative;
+    display: flex;
+    padding: 30px 0 70px;
+    @include respond-to(large) {
+        padding-bottom: 20px;
+    }
+    .container{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card-content{
+        position: relative;
+    }
+
+    .main-heading{
+        max-width: 800px;
+        position: relative;
+        font-family: $font-medium;
+        font-weight: 500;
+        background: linear-gradient(90.27deg, #FFFFFF 1.63%, rgba(255, 255, 255, 0) 120%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 50px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-bottom: 30px;
+        @include respond-to(large) {
+            font-size: 32px;
+            margin-bottom: 20px;
+            br{
+                display: none;
+            }
+        }
+    }
+
+    .sub-heading{
+        position: relative;
+        font-family: $font-regular;
+        font-weight: 400;
+        background: linear-gradient(90.27deg, #FFFFFF 1.63%, rgba(255, 255, 255, 0) 140%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 750px;
+        @include respond-to(large) {
+            width: 340px;
+            font-size: 18px;
+        }
+        &:before,
+        &:after{
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            width: 300px;
+            height: 58px;
+            background-repeat: no-repeat;
+            background-position: 0;
+            background-color: transparent;
+            @include respond-to(large) {
+                top: 0;
+                width: 100px;
+                height: 27px;
+                background-size: 100%;
+            }
+        }
+        &:before{
+            background-image: url(../images/line_left.png);
+        }
+        &:after{
+            background-image: url(../images/line_right.png);
+            right: 0;
+            left: auto;
+        }
+    }   
+}
+
+.tab-container {
+    width: 1170px;
+    background: linear-gradient(145deg, #101432, #141b4a);
+    border-radius: 24px;
+    padding: 20px 60px 35px;
+    border: 1px solid rgba(38, 38, 43, 1);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    background: transparent url('../images/tab_bg.png') no-repeat right top;
+    @include respond-to(mdlaptop) {
+        width: 1140px;
+    }
+    @include respond-to(mediumlarge) {
+        width: 900px;
+    }
+    @include respond-to(large) {
+        width: 100%;
+        padding: 10px 10px 20px;
+        background-size: auto 100%;
+    }
+    .tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        border: 1px solid rgba(63, 152, 167, 0.36);
+        max-width: max-content;
+        margin: 0 auto 30px;
+        border-radius: 10px;
+        padding: 4px;
+        @include respond-to(large) {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .tab {
+            border: 0;
+            padding: 6px 30px;
+            color: rgba(255, 255, 255, 1);
+            border-radius: 6px;
+            background: transparent;
+            cursor: pointer;
+            @include transition(all, 0.4s, ease);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include respond-to(large) {
+                padding: 10px 14px;
+            }
+            &.active {
+                background: rgba(255, 255, 255, 0.2);
+                color: #fff;
+                font-weight: bold;
+            }
+            &:hover {
+                background: rgba(255, 255, 255, 0.15);
+            }
+            .icon{
+                height: 24px;
+                width: 24px;
+                background: #101432;
+                margin-right: 15px;
+                display: inline-block;
+                @include respond-to(large) {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 10px;
+                }
+            }
+            .text{
+                font-size: 16px;
+                font-family: $font-semi-bold;
+                font-weight: 500;
+                line-height: 30px;
+                @include respond-to(large) {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+    .tab-panel {
+        display: none;
+        .content{
+            max-width: 450px;
+            @include respond-to(large) {
+                max-width: 100%;
+                order: 2;
+            }
+        }
+        &.active {
+            display: flex;
+        }
+        &#payments{
+            justify-content: space-between;
+            align-items: center;
+            @include respond-to(large) {
+                flex-direction: column;
+            }
+        }
+        h2{
+            font-family: $font-regular;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 30px;
+            color: $color-white;
+            margin-bottom: 18px;
+            @include respond-to(large) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        p{
+            font-family: $font-regular;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: rgba(180, 180, 180, 1);
+            margin-bottom: 30px;
+            @include respond-to(large) {
+                font-size: 12px;
+                line-height: 18px;
+                margin-bottom: 10px;
+            }
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            li{
+                display: flex;
+                justify-content: start;
+                margin-bottom: 26px;
+                text-decoration: none;
+                @include respond-to(large) {
+                    margin-bottom: 15px;
+                }
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+                .icon{
+                    margin-right: 20px;
+                    @include respond-to(large) {
+                        margin-right: 10px;
+                        width: 18px;
+                        height: 18px;
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .text{
+                    font-size: 20px;
+                    line-height: 32px;
+                    font-family: $font-regular;
+                    font-weight: 400;
+                    color: rgba(141, 141, 153, 1);
+                    @include respond-to(large) {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        .img-wrap{
+            @include respond-to(large) {
+                order: 1;
+                max-width: 280px;
+            }
+            img{
+                height: auto;
+            }
+        }
+        .btn-wrap{
+            margin-top: 35px;
+            @include respond-to(large) {
+                margin-top: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+@use 'font' as *;
+
+.reasons-partner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 130px 0 40px;
+    @include respond-to(large) {
+        padding: 50px 0 ;
+    }
+    .bg{
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        width: 1000px;
+        height: auto;
+        margin: auto;
+        @include respond-to(large) {
+            width: 300px;
+            img{
+                height: auto;
+            }
+        }
+    }
+    .container{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main-heading{
+        max-width: 800px;
+        position: relative;
+        font-family: $font-medium;
+        font-weight: 500;
+        background: linear-gradient(90.27deg, #FFFFFF 1.63%, rgba(255, 255, 255, 0) 103.32%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 50px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-bottom: 30px;
+        @include respond-to(large) {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    }
+    .sub-heading{
+        position: relative;
+        font-family: $font-regular;
+        font-weight: 400;
+        background: linear-gradient(90.27deg, #FFFFFF 1.63%, rgba(255, 255, 255, 0) 140%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 820px;
+        @include respond-to(large) {
+            width: 340px;
+            font-size: 18px;
+        }
+        &:before,
+        &:after{
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            width: 300px;
+            height: 58px;
+            background-repeat: no-repeat;
+            background-position: 0;
+            background-color: transparent;
+            @include respond-to(large) {
+                top: 0;
+                width: 100px;
+                height: 27px;
+                background-size: 100%;
+            }
+        }
+        &:before{
+            background-image: url(../images/line_left.png);
+        }
+        &:after{
+            background-image: url(../images/line_right.png);
+            right: 0;
+            left: auto;
+        }
+    }
+    .img-wrap{
+        @include respond-to(large) {
+            width: 300px;
+        }
+        img{
+            @include respond-to(laptop) {
+                height: auto;
+            }
+        }
+    }
+}

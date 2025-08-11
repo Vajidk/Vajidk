@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <link rel="preload" href="assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/main.css"></noscript>
+    
+    <!-- Preload JavaScript -->
+    <link rel="preload" href="assets/js/global.js" as="script">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+              <img src="assets/images/logo_UzOPay.svg" alt="Brand Logo" height="24" width="72"/>
+            </a>
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <nav class="nav-wrap">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#aiBanking" class="nav-link submenu">Ai Banking</a></li>
+                    <li><a href="#payments" class="nav-link">Payments</a></li>
+                    <li><a href="#payouts" class="nav-link">Payouts</a></li>
+                    <li><a href="#payroll" class="nav-link">Payroll</a></li>
+                    <li><a href="#contactus" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+      <section class="pagewrapper">
+        <!--1st banner section start-->
+        <div class="hero-banner">
+          <div class="container">
+              <div class="content">
+                <a href="#" class="tag">
+                  <span>Pay Smart. Pay Fast</span>
+                </a>
+                <h1 class="heading">End-to-End Payout & Payroll <br/>Solutions for Digital Era.</h1>
+                <p class="para">Optimize transactions and payouts with our secure, <br/>efficient payment gateway solution, ensuring smooth <br/>operations.</p>
+                <div class="btn-wrap">
+                  <a href="#" class="btn arrow btn-outline" onmouseover="buttonHover.play()">
+                    <span>Reach Out</span>
+                  </a>
+                  <a href="#" class="btn arrow btn-primary" onmouseover="buttonHover.play()">
+                    <span>Get Started</span>
+                  </a>
+                </div>
+            </div>
+            <div class="img-wrap">
+              <picture>
+                <source media="(min-width:993px)" srcset="assets/images/robot.png">
+                <source media="(max-width:991px)" srcset="assets/images/robot.png">
+                <img src="assets/images/robot.png" alt="Robot" width="838" height="630"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+        <!--1st banner section end-->
+
+        <!-- 2nd component Reliable and Efficient start-->
+        <div class="reliableEfficient">
+          <div class="container">
+            <span class="graph-line"></span>
+            <span class="glow"></span>
+            <div class="content">
+              <a href="#" class="tag">
+                <span>Reliable, and Efficient</span>
+              </a>
+              <h2 class="heading">Simplify the <br/>payments process</h2>
+              <p class="para">Tools crafted to simplify and enhance your payout processes.</p>
+            </div>
+            <div class="img-wrap">
+              <picture>
+                <source media="(min-width:993px)" srcset="assets/images/reliable_eeficiet.png">
+                <source media="(max-width:991px)" srcset="assets/images/reliable_eeficiet.png">
+                <img src="assets/images/reliable_eeficiet.png" alt="Robot" width="564" height="324"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd component Reliable and Efficient end-->
+
+        <!--3rd component GSAP Text Animation Start-->
+        <div class="text-wefocus">
+          <div class="container">
+            <div class="wefocus">
+              <p>
+                We focus on your finances, you focus on what matters most. Your finance our pride, Always Safe & Reliable.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--3rd component GSAP Text Animation End-->
+
+        <!--4th Component Payout Service Centric Start-->
+        <div class="payout-service">
+          <div class="container">
+            <div class="content">
+              <a href="#" class="tag">
+                <span>Payout Service Centric</span>
+              </a>
+              <h2 class="main-heading">Streamlined for Payout Ease and Efficiency</h2>
+              <div class="stepers">
+                <ul>
+                  <li class="list-item active">
+                    <a href="javascript:void(0);">
+                      <h3 class="heading">Comprehensive Documentation</h3>
+                      <p class="para">Access clear, detailed documentation that simplifies integration and accelerates your payout setup.</p>
+                    </a>
+                  </li>
+                  <li class="list-item">
+                    <a href="javascript:void(0);">
+                      <h3 class="heading">Quick Start SDKs</h3>
+                      <p class="para">Leverage our ready-to-use SDKs for various programming languages, enabling quick and smooth payout implementation.</p>
+                    </a>
+                  </li>
+                  <li class="list-item">
+                    <a href="javascript:void(0);">
+                      <h3 class="heading">Sandbox Environment</h3>
+                      <p class="para">Test and refine your payout integration in a secure sandbox environment before going live, ensuring a seamless launch.</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="btn-wrap">
+                <a href="#" class="btn arrow btn-primary" onmouseover="buttonHover.play()">
+                  <span>Get Started</span>
+                </a>
+              </div>
+          </div>
+          <div class="img-wrap">
+            <picture>
+              <source media="(min-width:993px)" srcset="assets/images/payout_services.png">
+              <source media="(max-width:991px)" srcset="assets/images/payout_services.png">
+              <img src="assets/images/payout_services.png" alt="Robot" width="610" height="645"/>
+            </picture>
+          </div>
+        </div>
+        </div>
+        <!--4th Component Payout Service Centric End-->
+        
+        <!--5th Component Video Start-->
+        <div class="video-wrap">
+          <div class="conatiner">
+            <video class="scroll-video" src="assets/videos/On-page-scroll-text overlapping.mp4" type="video/mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted"></video>
+          </div>
+        </div>
+        <!--5th Component Video End-->
+        
+        <!--6th Component Video Start-->
+        <div class="build-future">
+          <div class="container">
+            <div class="content">
+              <h2 class="heading">
+                Let's build the <br/>future of finance together
+              </h2>
+              <div class="btn-wrap">
+                <a href="#" class="btn arrow btn-primary" onmouseover="buttonHover.play()">
+                  <span>Get Started</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--6th Component Video End-->
+
+        <!--7th Component Reasons to partner Start-->
+        <div class="reasons-partner">
+          <picture class="bg">
+            <source media="(min-width:993px)" srcset="assets/images/reasons_background.png">
+            <source media="(max-width:991px)" srcset="assets/images/reasons_background.png">
+            <img src="assets/images/reasons_background.png" alt="Robot" width="1000" height="1000"/>
+          </picture>
+          <div class="container">
+            <h3 class="sub-heading">Reasons to Partner</h3>
+            <h2 class="main-heading">Exceptional Support for Your Success</h2>
+            <div class="img-wrap">
+              <picture>
+                <source media="(min-width:993px)" srcset="assets/images/partner-layout.png">
+                <source media="(max-width:991px)" srcset="assets/images/partner-layout.png">
+                <img src="assets/images/partner-layout.png" alt="Robot" width="1120" height="921"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+        <!--7th Component Reasons to partner End-->
+      
+        <!--8th Component Our Experties Start-->
+        <div class="our-experties">
+          <div class="container">
+            <h3 class="sub-heading">Our Experties</h3>
+            <h2 class="main-heading">Redefining Payment <br/>Processing for You</h2>
+            <div class="swiper slider-ourexperties">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="img-wrap">
+                        <img src="assets/images/upi_autopay.png" alt="UPI Autopay" width="185" height="200"/>
+                      </div>
+                      <h2>UPI Autopay</h2>
+                      <p>Automate your payments with UPI Autopay, ensuring timely transactions without manual effort.</p>
+                      <a href="#" class="btn-right">
+                        <img src="assets/images/arrow_right.svg" alt="icon" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="img-wrap">
+                        <img src="assets/images/api_banking.png" alt="API Banking" width="185" height="200"/>
+                      </div>
+                      <h2>API Banking</h2>
+                      <p>Integrate financial services seamlessly into your applications with our robust API banking solutions.</p>
+                      <a href="#" class="btn-right">
+                        <img src="assets/images/arrow_right.svg" alt="icon" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="img-wrap">
+                        <img src="assets/images/payouts.png" alt="Payouts" width="185" height="200"/>
+                      </div>
+                      <h2>Payouts</h2>
+                      <p>Deliver payouts swiftly and securely, ensuring timely disbursement to employees, partners, or clients.</p>
+                      <a href="#" class="btn-right">
+                        <img src="assets/images/arrow_right.svg" alt="icon" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="img-wrap">
+                        <img src="assets/images/bulk_payments.png" alt="Bulk Payment" width="185" height="200"/>
+                      </div>
+                      <h2>Bulk Payments</h2>
+                      <p>Process multiple payments at once, saving time and reducing errors with bulk payment options.</p>
+                      <a href="#" class="btn-right">
+                        <img src="assets/images/arrow_right.svg" alt="icon" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="img-wrap">
+                        <img src="assets/images/api_banking.png" alt="API Banking" width="185" height="200"/>
+                      </div>
+                      <h2>API Banking</h2>
+                      <p>Integrate financial services seamlessly into your applications with our robust API banking solutions.</p>
+                      <a href="#" class="btn-right">
+                        <img src="assets/images/arrow_right.svg" alt="icon" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="img-wrap">
+                        <img src="assets/images/payouts.png" alt="Payouts" width="185" height="200"/>
+                      </div>
+                      <h2>Payouts</h2>
+                      <p>Deliver payouts swiftly and securely, ensuring timely disbursement to employees, partners, or clients.</p>
+                      <a href="#" class="btn-right">
+                        <img src="assets/images/arrow_right.svg" alt="icon" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-btn-wrap">
+                <div class="oe-slider-btn-next"></div>
+                <div class="oe-slider-btn-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--8th Component Our Experties End-->
+
+        <!--9th Component Enhancing payments Start-->
+        <div class="enhancing-payments">
+          <div class="container">
+            <h3 class="sub-heading">Enhancing payments</h3>
+            <h2 class="main-heading">Powering Payments Across <br/>Industries</h2>
+
+            <div class="tab-container">
+              <div class="tabs">
+                <button class="tab active" data-tab="payments">
+                  <span class="icon"><img src="assets/images/payments.png" alt=""/></span>
+                  <span class="text">Payments</span>
+                </button>
+                <button class="tab" data-tab="payout">
+                  <span class="icon"><img src="assets/images/payout.png" alt=""/></span>
+                  <span class="text">Payout</span>
+                </button>
+                <button class="tab" data-tab="payroll">
+                  <span class="icon"><img src="assets/images/payroll.png" alt=""/></span>
+                  <span class="text">Payroll</span>
+                </button>
+                <button class="tab" data-tab="ai-banking">
+                  <span class="icon"><img src="assets/images/al_banking.png" alt=""/></span>
+                  <span class="text">AI Banking</span>
+                </button>
+              </div>
+            
+              <div class="tab-content">
+                <div class="tab-panel active" id="payments">
+                  <div class="content">
+                    <h2>Elevate Your Online Store's <br/>Payment Experience</h2>
+                    <p>Our payment gateway simplifies transactions for e-commerce 
+                      businesses, delivering fast and secure processing. With smooth 
+                      integration, we enhance your store's payment capabilities. Optimize 
+                      your checkout process and boost customer satisfaction easily.</p>
+
+                    <ul>
+                      <li>
+                          <span class="icon">
+                            <img src="assets/images/optimize_checkout.png" alt="icon" width="32" height="32"/>
+                          </span>
+                          <span class="text">Optimize Your Checkout</span>
+                      </li>
+                      <li>
+                          <span class="icon">
+                            <img src="assets/images/fast_secure.png" alt="icon" width="32" height="32"/>
+                          </span>
+                          <span class="text">Fast and Secure</span>
+                      </li>
+                      <li>
+                          <span class="icon">
+                            <img src="assets/images/smooth_integration.png" alt="icon" width="32" height="32"/>
+                          </span>
+                          <span class="text">Smooth Integration</span>
+                      </li>
+                    </ul>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn arrow btn-primary" onmouseover="buttonHover.play()">
+                        <span>Get Started</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="assets/images/tab_content_01.png" alt="tab content img"  width="590" height="340"/>
+                  </div>
+                </div>
+            
+                <div class="tab-panel" id="payout">
+                  <h2>Payout Management</h2>
+                </div>
+            
+                <div class="tab-panel" id="payroll">
+                  <h2>Payroll Automation</h2>
+                </div>
+            
+                <div class="tab-panel" id="ai-banking">
+                  <h2>AI Banking</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--9th Component Enhancing payments End-->
+      </section>
+    </main>
+
+    <!-- footer component start-->
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-about">
+            <a href="#" class="logo">
+              <img src="assets/images/logo_UzOPay.svg" alt="Brand Logo" height="24" width="72"/>
+            </a>
+            <p>Our payment gateway simplifies transactions for e-commerce 
+              businesses, delivering fast and secure processing. With smooth 
+              integration, we enhance your store's payment capabilities. Optimize 
+              your checkout process and boost customer satisfaction easily.</p>
+              <ul class="social-media">
+                <li>
+                  <a href="#"/>
+                    <img src="assets/images/facebook.svg" alt="facebook" height="14" width="14"/>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"/>
+                    <img src="assets/images/x.svg" alt="Twiter" height="14" width="14"/>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"/>
+                    <img src="assets/images/insta.svg" alt="Instagram" height="14" width="14"/>
+                  </a>
+                </li>
+              </ul>
+          </div>
+
+          <div class="footer-links">
+            <ul>
+              <li class="fnav-list">
+                <h3>Payment</h3>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Payment Gateway</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Payment Links</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Payment Methods</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Bulk Payment</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Invoice</a>
+              </li>
+            </ul>
+
+            <ul>
+              <li class="fnav-list">
+                <h3>AI Banking</h3>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Current Account</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Accounting</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">API Banking</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">UPI Autopay</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Tax Payment</a>
+              </li>
+            </ul>
+
+            <ul>
+              <li class="fnav-list">
+                <h3>Policies</h3>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Cards</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">CMS</a>
+              </li>
+            </ul>
+
+            <ul>
+              <li class="fnav-list">
+                <h3>Company</h3>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">About us</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copy">&copy; 2025 UzOPay</div>
+          <div class="fb-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="scroll-top">
+      <img src="assets/images/arrow_right.svg" alt="icon" />
+    </div>
+    <!-- footer component end-->
+
+    <!-- Load JavaScript -->
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+    <script src="assets/js/vendor/split-type.min.js"></script>
+
+    <!-- <script src="assets/js/vendor/ScrollSmoother.min.js"></script> -->
+    <!-- <script src="assets/js/vendor/SplitText3.min.js"></script> -->
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/global.js"></script>
+</body>
+</html> 
